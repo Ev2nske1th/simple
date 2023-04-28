@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 /**
  * interactive - checks if the shell is in interactive mode
  *
