@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * _myexit - exits the shell
  *
@@ -26,11 +25,9 @@ int _myexit(info_t *info)
 		info->err_num = exit_status;
 		return (-2);
 	}
-
 	info->err_num = -1;
 	return (-2);
 }
-
 /**
  * _mycd - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
@@ -48,7 +45,6 @@ int _mycd(info_t *info)
 	{
 		_puts("TODO: >>getcwd failure emsg here<<\n");
 	}
-
 	if (!info->argv[1])
 	{
 		dir = _getenv(info, "HOME=");
@@ -78,28 +74,19 @@ int _mycd(info_t *info)
 		chdir_ret = chdir(info->argv[1]);
 	}
 
-	if (chdir_ret == -1)
 	{
-		print_error(info, "can't cd to ");
-		_eputs(info->argv[1]);
-		_eputchar('\n');
-	}
-	else
-	{
-		_setenv(info, "OLDPWD", _getenv(info, "PWD="));
-		_setenv(info, "PWD", getcwd(buffer, 1024));
-	}
 
 	return (0);
 }
 
 /**
  * _myhelp - prints help message
- * @info: Structure containing potential arguments. Used to maintain
- *         constant function prototype.
+ * @info: Structure containing potential arguments.
+ * Used to maintain constant function prototype.
  *
  * Return: Always 0
  */
+
 int _myhelp(info_t *info)
 {
 	(void)info; /* prevent unused parameter warning */
