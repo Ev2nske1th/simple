@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * bfree - Frees a pointer and sets it to NULL.
  *
@@ -11,7 +10,6 @@
 int bfree(void **ptr)
 {
 	if (ptr && *ptr)
-	
 	{
 		free(*ptr);
 		*ptr = NULL;
