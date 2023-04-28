@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * is_cmd - determines if file is an executable command
  *
