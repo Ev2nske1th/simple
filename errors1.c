@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * _erratoi - converts string to an integer
  *
@@ -24,7 +23,6 @@ int _erratoi(char *s)
 			result += (s[i] - '0');
 			if (result > INT_MAX)
 				return (-1);
-  
 		}
 		else
 			return (-1);
@@ -72,7 +70,6 @@ int print_d(int input, int fd)
 
 	if (fd == STDERR_FILENO)
 		__putchar = _eputchar;
- 
 	if (input < 0)
 	{
 		_abs_ = -input;
@@ -130,7 +127,6 @@ char *convert_number(long int num, int base, int flags)
 
 	if (sign)
 		*--ptr = sign;
- 
 	return (ptr);
 }
 
