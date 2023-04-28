@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * _eputs - print input string
  *
