@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * get_history_file - gets the path of the history file
  * @info: pointer to the parameter struct
