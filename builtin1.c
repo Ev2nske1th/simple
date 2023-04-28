@@ -9,6 +9,7 @@
  *        constant function prototype.
  * Return: Always 0
  */
+
 int display_history(info_t *info)
 {
 	print_list(info->history);
